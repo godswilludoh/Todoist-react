@@ -1,0 +1,53 @@
+.content {
+	margin: 2rem 5rem;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+}
+
+h2 {
+	font-size: 30px;
+	margin: 1rem;
+}
+
+input {
+	outline: none;
+	width: 75%;
+	height: 3rem;
+	border: 1px solid #ccc;
+	margin: 1rem 0 1rem 1rem;
+	padding: 1rem;
+	font-size: 16px;
+}
+
+button {
+	display: inline-block;
+	padding: 0.9rem 1.5rem;
+	border: none;
+}
+
+.add-btn {
+	color: #fff;
+	background: rgb(69, 176, 252) 100%;
+	cursor: pointer;
+	margin: 1rem auto;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.add-btn:hover {
+	background: rgba(29, 223, 253, 0.617) 50%;
+}
+
+.edit-btn {
+	display: none;
+	color: #eee;
+	background: rgba(29, 223, 253, 0.617) 50%;
+	cursor: pointer;
+	margin: 1rem auto;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.edit-btn:hover {
+	background: rgb(69, 176, 252) 100%;
+}

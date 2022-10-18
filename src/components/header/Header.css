@@ -1,0 +1,31 @@
+.title-container {
+	background: linear-gradient(
+		90deg,
+		rgb(180, 58, 58) 0%,
+		rgba(29, 223, 253, 0.617) 50%,
+		rgb(69, 176, 252) 100%
+	);
+	padding: 10px 40px;
+}
+
+h1 {
+	color: #fefefe;
+	padding: 20px 40px;
+	font-size: 40px;
+}
+
+.header-link-container {
+	text-align: center;
+}
+
+.header-links {
+	margin: 0 5px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #000;
+	text-decoration: none;
+}
+
+.header-links:hover {
+	color: #ff1ebc;
+}

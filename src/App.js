@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { useState, React } from 'react';
 import './App.css';
+import Todoist from './components/Todoist';
+import TodoDetails from './components/todoist/todoDetails/TodoDetails';
+import { Routes, Route } from 'react-router-dom';
+import Contact from './components/contact/Contact';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [todos, setTodos] = useState([
+		{
+			_id: crypto.randomUUID(),
+			title: 'Buy Bread',
+			isCompleted: true,
+		},
+		{
+			_id: crypto.randomUUID(),
+			title: 'Buy Milk',
+			isCompleted: false,
+		},
+	]);
+
+	console.log('App', todos);
+	return (
+		<div className='container'>
+			<Routes>
+				<Route index element={<Todoist todos={todos} />} />
+				<Route path='details' element={<TodoDetails />} />
+				<Route path='contact' element={<Contact />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
