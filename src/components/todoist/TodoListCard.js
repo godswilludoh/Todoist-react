@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 const TodoListCard = (props) => {
 	const { todo } = props;
-	const { id, title, isCompleted } = todo;
+	const { _id, title, isCompleted } = todo;
 	return (
 		<li className={isCompleted ? 'checked' : undefined}>
 			{title}
-			<Link to='/details' className='view-icon utility-btn'>
+			<Link to={`/${_id}`} className='view-icon utility-btn'>
 				<FaEye />
 			</Link>
 

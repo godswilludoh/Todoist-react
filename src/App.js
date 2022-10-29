@@ -8,13 +8,18 @@ import Contact from './components/contact/Contact';
 function App() {
 	const [todos, setTodos] = useState([
 		{
-			_id: crypto.randomUUID(),
+			_id: '7b813bfa-3c28-4562-8afc-9a8c5319d4c6',
 			title: 'Buy Bread',
 			isCompleted: true,
 		},
 		{
-			_id: crypto.randomUUID(),
+			_id: '246bd4dd-657c-4ab2-bfda-5c75b5239277',
 			title: 'Buy Milk',
+			isCompleted: false,
+		},
+		{
+			_id: 'd89386d1-2c94-4297-aa5c-c38e3aba12d4',
+			title: 'Buy Flowers',
 			isCompleted: false,
 		},
 	]);
@@ -23,8 +28,8 @@ function App() {
 	return (
 		<div className='container'>
 			<Routes>
-				<Route index element={<Todoist todos={todos} />} />
-				<Route path='details' element={<TodoDetails />} />
+				<Route index element={<Todoist todos={todos} settodos={setTodos} />} />
+				<Route path=':todo_id' element={<TodoDetails todos={todos} />} />
 				<Route path='contact' element={<Contact />} />
 			</Routes>
 		</div>
